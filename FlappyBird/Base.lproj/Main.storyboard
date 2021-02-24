@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="FlappyBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flappy-bird-background-11" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-cJ-qNn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NicePng_flappy-bird-png_1515398" translatesAutoresizingMaskIntoConstraints="NO" id="6J2-rs-gYt">
+                                <rect key="frame" x="67.5" y="20" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1mk-f5-3O1"/>
+                                    <constraint firstAttribute="width" constant="240" id="agy-8V-2G5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TV-v0-5og">
+                                <rect key="frame" x="16" y="602" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Hci-we-P0K"/>
+                                    <constraint firstAttribute="height" constant="65" id="hCS-Yn-6ls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="34"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="playBtn:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5EK-27-6ko"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7TV-v0-5og" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="5ZI-zG-xsh"/>
+                            <constraint firstItem="mpy-cJ-qNn" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="Ao5-re-Slt"/>
+                            <constraint firstItem="mpy-cJ-qNn" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="GZc-XZ-T7k"/>
+                            <constraint firstItem="6J2-rs-gYt" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="Izm-nl-ibD"/>
+                            <constraint firstItem="6J2-rs-gYt" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="MIf-LN-ICQ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="7TV-v0-5og" secondAttribute="trailing" constant="16" id="Zsi-q6-Bxy"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="mpy-cJ-qNn" secondAttribute="bottom" id="bZG-Q5-ksU"/>
+                            <constraint firstItem="7TV-v0-5og" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="cZV-R1-NfZ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="mpy-cJ-qNn" secondAttribute="trailing" id="ew2-ty-SVU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundimg" destination="mpy-cJ-qNn" id="aq3-tA-JfS"/>
+                        <outlet property="logoimg" destination="6J2-rs-gYt" id="1PP-d5-LnA"/>
+                        <outlet property="playbtn" destination="7TV-v0-5og" id="pA9-Gh-nN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="54.422788605697157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NicePng_flappy-bird-png_1515398" width="2400" height="640"/>
+        <image name="flappy-bird-background-11" width="640" height="980"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
